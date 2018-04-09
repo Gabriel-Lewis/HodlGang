@@ -1,0 +1,24 @@
+{
+    "background": {
+        "scripts": [ "background.js"],
+        "persistent": true
+    },
+    "browser_action": {
+      "default_icon": "Bitcoin-128.png"
+    },
+    "icons": {
+        "128": "Bitcoin-128.png",
+        "16": "Bitcoin.png"
+    },
+    "manifest_version": 2,
+    "minimum_chrome_version": "23",
+    "name": "HODLGANG",
+    "description": "Block most CryptoCurrency sites",
+    "permissions": [
+        "webRequest",
+        "webRequestBlocking",
+        "<all_urls>",
+        "storage"
+    ],
+    "version": "0.0.1"
+}
