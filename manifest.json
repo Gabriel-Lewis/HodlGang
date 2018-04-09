@@ -11,7 +11,6 @@
         "16": "Bitcoin.png"
     },
     "manifest_version": 2,
-    "minimum_chrome_version": "23",
     "name": "HODLGANG",
     "description": "Block most CryptoCurrency sites",
     "permissions": [
@@ -20,5 +19,5 @@
         "<all_urls>",
         "storage"
     ],
-    "version": "0.0.1"
+    "version": "0.0.2"
 }

@@ -70,7 +70,7 @@ chrome.storage.onChanged.addListener((changes, areaName) => {
 })
 
 const updateIcon = (isHodling = true) => {
-  const file = isHodling ? 'bitcoin.png' : 'grayBitcoin.png'
+  const file = isHodling ? 'Bitcoin-128.png' : 'grayBitcoin.png'
   const title = isHodling ? 'HODLING ON' : 'HODLING OFF!'
   chrome.browserAction.setIcon({ path: { "128": file } });
   chrome.browserAction.setTitle({ title })
@@ -94,7 +94,6 @@ const listener = (page) => {
 
 chrome.runtime.onInstalled.addListener(function (object) {
     chrome.tabs.create({url: chrome.extension.getURL("hodlReminder.html")}, function (tab) {
-        console.log("New tab launched with http://yoursite.com/");
         chrome.storage.local.set({
           isHodling: true
         })
@@ -102,7 +101,6 @@ chrome.runtime.onInstalled.addListener(function (object) {
 });
 
 chrome.runtime.onStartup.addListener((object) => {
-  console.log("hello");
   chrome.storage.local.get({isHodling: true}, function(result) {
     updateIcon(result.isHodling)
   });
